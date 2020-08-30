@@ -1,4 +1,4 @@
-// GenerateGame(GameLevel level) method generates the new game. The code of this are as follows .
+// GenerateGame(GameLevel level) method generates the new game. The code of levels are as follows .
 
 public void GenerateGame(GameLevel level)
 {
