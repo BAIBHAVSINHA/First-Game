@@ -1,1 +1,16 @@
-
+private void CurrentSet_ColumnChanging(object sender, 
+                System.Data.DataColumnChangeEventArgs e) 
+{
+    try
+    {
+        lblStatus.Text="";
+        int rowPos = dataGrid1.CurrentCell.RowNumber;
+        string currentNumber = e.ProposedValue as string;
+        
+        int number =Int32.Parse(currentNumber);
+        if((number < 1)||(number >9))
+        {
+            string errorMessage=
+                "Number should be between 1 and 9";
+            e.Row.SetColumnError(e.Column,errorMessage);
+        }
