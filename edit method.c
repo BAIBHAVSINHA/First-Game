@@ -23,3 +23,13 @@ protected override void Edit(System.Windows.Forms.CurrencyManager
                                               colPos,dataValue);
         }
     }
+else
+    {
+         _answerPostion =false;
+    }
+    if (!readOnly && cellIsVisible)
+    {        
+        // Save current row in the DataGrid and currency manager 
+        // associated with the data source for the DataGrid
+        this._currentRow = rowNum;
+        this.cm = source;
