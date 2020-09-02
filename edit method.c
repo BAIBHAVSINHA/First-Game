@@ -33,3 +33,14 @@ else
         // associated with the data source for the DataGrid
         this._currentRow = rowNum;
         this.cm = source;
+if(!_answerPostion)
+        {
+            // Make parent of scrollbar same as parent.
+            this.vsBar.Parent = this.TextBox.Parent;
+            Rectangle rect = 
+                this.DataGridTableStyle.DataGrid.GetCurrentCellBounds();
+            //Place this control to right.
+            this.vsBar.Location = 
+                new Point(rect.Right-this.SpinnerWidth,rect.Top);
+            this.vsBar.Size = 
+                new Size(this.SpinnerWidth,this.TextBox.Height);
