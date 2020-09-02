@@ -57,3 +57,11 @@ if(!_answerPostion)
             this.TextBox.BackColor = Color.Blue;
             this.TextBox.ForeColor=Color.White;
         }
+else
+        {
+            this.TextBox.ReadOnly=true;
+            this.TextBox.BackColor=Color.White;
+            this.TextBox.ForeColor =Color.Black;
+        }
+    }
+}
