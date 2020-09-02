@@ -44,3 +44,16 @@ if(!_answerPostion)
                 new Point(rect.Right-this.SpinnerWidth,rect.Top);
             this.vsBar.Size = 
                 new Size(this.SpinnerWidth,this.TextBox.Height);
+
+            // Make the scrollbar visible and place on top textbox control
+            this.vsBar.Show();
+            // As textbox control also there let us bring this to front.
+            this.vsBar.BringToFront();
+            
+            this.vsBar.Show();
+            //    this.TextBox.Text= this.vsBar.Value.ToString();
+            this.TextBox.ReadOnly=true;
+            //Set text color properties different as we are editing cell.
+            this.TextBox.BackColor = Color.Blue;
+            this.TextBox.ForeColor=Color.White;
+        }
